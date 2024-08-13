@@ -147,6 +147,7 @@ then
     echo “Digite a porta inicial - Ex: 6500” 
     read portaf 
     nc -w 1 -v -n -z “$ip” “$portai-$portaf”
+    
 elif [ "$1" = "-f" ]
 then
     echo "Chamar Scripts Externos"
@@ -156,7 +157,7 @@ then
     while true; do     
     echo "Listening on port $PORT..."     
     nc -l -p $PORT | tee -a OK.txt done
-
+    
 elif [ "$1" = "-g" ]
 then
     echo "Extração de dados"
@@ -165,13 +166,13 @@ then
     while true; do     
     echo "Listening on port $PORT..."     
     nc -l -p $PORT | tee -a OK.txt done
-
+    
 elif [ "$1" = "-h" ]
 then
     echo "Localização de Serviços"
     echo "Escolha o IP do Alvo"
     read "ip"
-    map -sV -T5 -p- -v "$ip" | grep -i "open"
+    map -sV -T5 -p- -v "$ip" | grep -i "open"   
     
 elif [ "$1" = "-i" ]
 then
@@ -184,7 +185,8 @@ then
     echo "Digite o Endpoint Ex: /"
     read endpoint
     echo ""
-    echo -e "OPTIONS "$endpoint" / HTTP/1.1\r\nHost: 127.0.0.1\r\n\r\n" | nc -w 1 $dominio $PORT
+    echo -e "OPTIONS "$endpoint" HTTP/1.1\r\nHost: 127.0.0.1\r\n\r\n" | nc -w 1 $dominio $PORT
+    
     elif [ "$1" = "-j" ]
 then
     echo "Localizador de Servidores Web"
