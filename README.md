@@ -1,3 +1,44 @@
+OroochimaruLog é um script de shell desenvolvido para realizar Analises de log, uma interface de linha de comando simples, ele permite que os usuários realizem uma analise de logs, verificando ips, resultado de requisições, portas de serviços, aplicações utilizadas, 
+Funcionalidades
+
+O script oferece as seguintes opções:
+
+     [1] Listar Ips
+     [2] Qtd de acesso por recurso
+     [3] User-Agente utilizados por IP
+     [4] Tools utilizadas pelo IP
+     [5] Procurar acesso por arquivo
+     [6] Primeiro/Último acesso pelo IP
+
+Requisitos
+
+    cat - para trabalhar os dados. 
+
+Instalação
+
+Clone o repositório:
+
+git clone https://github.com/RalfPearlRand/RedTeamScripts-Mitsuki.git
+cd OroochimaruLog
+
+Dê permissão de execução ao script:
+
+chmod +x OroochimaruLog.sh
+
+Uso
+
+Execute o script com uma das opções disponíveis. Por exemplo:
+
+./OroochimaruLog.sh -a
+
+
+Desenvolvedor Principal: Rafael Lira de Oliveira/0R0CH!S4G3 - https://www.linkedin.com/in/rafael-lira-de-oliveira-734b75224/)
+
+Contribuições Especiais: Carlos Tuma - https://github.com/carlosalbertotuma | https://www.linkedin.com/in/carlos-tuma
+
+0ff3ns!v3 S3cur!ty ®
+
+
 JiraiyaRecon é um script de shell desenvolvido para realizar varreduras de portas e serviços em redes. Com uma interface de linha de comando simples, ele permite que os usuários realizem uma variedade de operações de rede, como varredura de portas usando diferentes ferramentas e técnicas.
 Funcionalidades
 
