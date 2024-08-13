@@ -31,14 +31,7 @@ Execute o script com uma das opções disponíveis. Por exemplo:
 
 ./OroochimaruLog.sh -a
 
-
-Desenvolvedor Principal: Rafael Lira de Oliveira/0R0CH!S4G3 - https://www.linkedin.com/in/rafael-lira-de-oliveira-734b75224/)
-
-Contribuições Especiais: Carlos Tuma - https://github.com/carlosalbertotuma | https://www.linkedin.com/in/carlos-tuma
-
-0ff3ns!v3 S3cur!ty ®
-
-
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 JiraiyaRecon é um script de shell desenvolvido para realizar varreduras de portas e serviços em redes. Com uma interface de linha de comando simples, ele permite que os usuários realizem uma variedade de operações de rede, como varredura de portas usando diferentes ferramentas e técnicas.
 Funcionalidades
 
