@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Define cores para formatação
+cor_vermelho="\e[1;31m"   # Define vermelho claro e negrito
+cor_verde="\e[1;32m"      # Define verde claro e negrito
+cor_azul="\e[1;34m"       # Define azul
+cor_reset="\e[0m"         # Reseta a formatação para o padrão
+
+# Exibir o banner
+
 banner()
 {
     echo  -e "\e[31m     ██╗██╗██████╗  █████╗ ██╗██╗   ██╗ █████╗     \e[0m"
@@ -37,6 +45,58 @@ banner2()
    echo " i - Indentifica Metodos"
    echo " j - Localizador de Servidores Web"
 }
+
+
+# Função para exibir ajuda
+exibir_ajuda() {
+    echo -e "Uso: ./portrecon.sh [opção]"
+    echo ""
+    echo -e "Opções disponíveis:"
+    echo ""
+    echo -e "  -a\tPortScan com Hping3"
+    echo -e "  -b\tPingSweep"
+    echo -e "  -c\tPingSweep Porta/Serviço"
+    echo -e "  -d\tPortScan em /dev/tcp"
+    echo -e "  -e\tPortScan com NetCat"
+    echo -e "  -f\tChamar Script Externo"
+    echo -e "  -g\tExtração de Dados"
+    echo -e "  -h\tLocalizando Serviços"
+    echo -e "  -i\tIdentifica Metodos"
+    echo -e "  -j\tLocalizador de Servidores Web"
+#    echo -e "  -k\tOpcao K"
+#    echo -e "  -l\tOpcao L"
+#    echo -e "  -m\tOpcao M"
+#    echo -e "  -n\tOpcao N"
+#    echo -e "  -o\tOpcao O"
+#    echo -e "  -p\tOpcao P"
+#    echo -e "  -q\tOpcao Q"
+#    echo -e "  -r\tOpcao R"
+#    echo -e "  -s\tOpcao S"
+#    echo -e "  -t\tOpcao T"
+#    echo -e "  -u\tOpcao U"
+#    echo -e "  -v\tOpcao V"
+#    echo -e "  -x\tOpcao X"
+#    echo -e "  -z\tOpcao Z"
+    echo ""
+}
+
+# Função para validar a entrada do IP
+validar_ip() {
+    local ip=$1
+    if [[ $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        return 0
+    else
+        echo " IP inválido. Por favor, digite um IP válido."
+        exit 1
+    fi
+}
+
+# Lógica do script
+if [[ "$1" == "--help" ]]; then
+    banner
+    exibir_ajuda
+    exit 0
+fi
 if [ "$1" = "-a" ]
 then
     echo "PortScan Hping3"
