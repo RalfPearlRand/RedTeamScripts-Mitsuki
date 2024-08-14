@@ -85,7 +85,6 @@ exibir_ajuda() {
 # Lógica do script
 if [[ "$1" == "--help" ]]; then
     banner
-    banner2
     exibir_ajuda
     exit 0
 
