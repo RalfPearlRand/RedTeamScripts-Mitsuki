@@ -10,27 +10,28 @@ cor_reset="\e[0m"         # Reseta a formatação para o padrão
 
 banner()
 {
-    echo  -e "\e[31m     ██╗██╗██████╗  █████╗ ██╗██╗   ██╗ █████╗     \e[0m"
-    echo  -e "\e[31m     ██║██║██╔══██╗██╔══██╗██║╚██╗ ██╔╝██╔══██╗    \e[0m"
-    echo  -e "\e[31m     ██║██║██████╔╝███████║██║ ╚████╔╝ ███████║    \e[0m"
-    echo  -e "\e[31m██   ██║██║██╔══██╗██╔══██║██║  ╚██╔╝  ██╔══██║    \e[0m"
-    echo  -e "\e[31m╚█████╔╝██║██║  ██║██║  ██║██║   ██║   ██║  ██║    \e[0m"
-    echo  -e "\e[31m ╚════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝    \e[0m"
-    echo  -e "\e[31m                                                   \e[0m"
-    echo  -e "\e[31m    ██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗    \e[0m"
-    echo  -e "\e[31m    ██╔══██╗██╔════╝██╔════╝██╔═══██╗████╗  ██║    \e[0m"
-    echo  -e "\e[31m    ██████╔╝█████╗  ██║     ██║   ██║██╔██╗ ██║    \e[0m"
-    echo  -e "\e[31m    ██╔══██╗██╔══╝  ██║     ██║   ██║██║╚██╗██║    \e[0m"
-    echo  -e "\e[31m    ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║    \e[0m"
-    echo  -e "\e[31m    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝    \e[0m"
-    echo  -e "\e[1;32m B y - 0R0CH!S4G3 -  V.0.1   \e[0m"
-    echo  -e "\e[1;32m   MENTORED BY Bl4dsc4n     \e[0m"
+echo  -e "     ██╗██╗██████╗  █████╗ ██╗██╗   ██╗ █████╗     "
+    echo  -e "     ██║██║██╔══██╗██╔══██╗██║╚██╗ ██╔╝██╔══██╗    "
+    echo  -e "     ██║██║██████╔╝███████║██║ ╚████╔╝ ███████║    "
+    echo  -e "██   ██║██║██╔══██╗██╔══██║██║  ╚██╔╝  ██╔══██║    "
+    echo  -e "╚█████╔╝██║██║  ██║██║  ██║██║   ██║   ██║  ██║    "
+    echo  -e " ╚════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝    "
+    echo  -e "                                                   "
+    echo  -e "    ██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗    "
+    echo  -e "    ██╔══██╗██╔════╝██╔════╝██╔═══██╗████╗  ██║    "
+    echo  -e "    ██████╔╝█████╗  ██║     ██║   ██║██╔██╗ ██║    "
+    echo  -e "    ██╔══██╗██╔══╝  ██║     ██║   ██║██║╚██╗██║    "
+    echo  -e "    ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║    "
+    echo  -e "    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝    \e[0m"
+    echo  -e "\e[1;32m B y - 0R0CH!S4G3 -  V.0.1   "
+    echo  -e "\   MENTORED BY Bl4dsc4n     \e[0m"
     echo  -e "\e[31m      0ff3ns!v3 S3cur!ty   \e[0m"
     echo '   _   _   _   _   _   _   _   _   _     _   _   _   _   _   _   _   _   '
     echo '  / \ / \ / \ / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ / \ / \  '
     echo ' ( 0 | f | f | 3 | n | s | ! | v | 3 ) ( S | 3 | c | u | r | ! | t | y ) '
     echo '  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/  '
     echo ''
+    }
 banner2()
 {
    echo "Opções" 
@@ -80,24 +81,14 @@ exibir_ajuda() {
     echo ""
 }
 
-# Função para validar a entrada do IP
-validar_ip() {
-    local ip=$1
-    if [[ $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-        return 0
-    else
-        echo " IP inválido. Por favor, digite um IP válido."
-        exit 1
-    fi
-}
-
 # Lógica do script
 if [[ "$1" == "--help" ]]; then
     banner
     exibir_ajuda
     exit 0
 fi
-if [ "$1" = "-a" ]
+
+if [ "$1" = "-a" ]; 
 then
     echo "PortScan Hping3"
     echo "Digite o IP"
@@ -140,14 +131,14 @@ then
 elif [ "$1" = "-e" ]
 then
     echo "PortScan ncat" 
-    echo “Digite o IP - Ex: 192.168.0.1” 
+    echo “Digite o IP” 
     read ip 
     echo “Digite a porta inicial - Ex: 1” 
     read portai 
     echo “Digite a porta inicial - Ex: 6500” 
     read portaf 
-    nc -w 1 -v -n -z “$ip” “$portai-$portaf”
-    
+    nc -w 1 -v -n -z “$ip” “$portai-$portaf” 
+       
 elif [ "$1" = "-f" ]
 then
     echo "Chamar Scripts Externos"
@@ -156,7 +147,7 @@ then
     ifconfig | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' 
     while true; do     
     echo "Listening on port $PORT..."     
-    nc -l -p $PORT | tee -a OK.txt done
+    nc -l -p $PORT | tee -a OK.txt ;done
     
 elif [ "$1" = "-g" ]
 then
@@ -165,14 +156,15 @@ then
     ifconfig | grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' 
     while true; do     
     echo "Listening on port $PORT..."     
-    nc -l -p $PORT | tee -a OK.txt done
-    
+    nc -l -p $PORT | tee -a OK.txt 
+    done
+
 elif [ "$1" = "-h" ]
 then
     echo "Localização de Serviços"
     echo "Escolha o IP do Alvo"
     read "ip"
-    map -sV -T5 -p- -v "$ip" | grep -i "open"   
+    map -sV -T5 -p- -v "$ip" | grep -i "open"
     
 elif [ "$1" = "-i" ]
 then
@@ -185,7 +177,7 @@ then
     echo "Digite o Endpoint Ex: /"
     read endpoint
     echo ""
-    echo -e "OPTIONS "$endpoint" HTTP/1.1\r\nHost: 127.0.0.1\r\n\r\n" | nc -w 1 $dominio $PORT
+    echo -e "OPTIONS "$endpoint"  HTTP/1.1\r\nHost: 127.0.0.1\r\n\r\n" | nc -w 1 $dominio $PORT
     
     elif [ "$1" = "-j" ]
 then
@@ -202,6 +194,7 @@ then
     read process
     for i in $(seq "$intervaloi" "$intervalof"); do 
            echo -e "80\n443\n8080" | xargs -P "$process" -I {} bash -c "curl -s -I $rede\.$i:{} && echo 'Porta: {} $rede.$i'"
+           done
 
 elif [ "$1" = "-q" ]
 then
@@ -232,4 +225,5 @@ then
     echo "Opcao Z"
 else
     echo "Opcao vazia ou não existe"
-fi
+ banner
+ exit
